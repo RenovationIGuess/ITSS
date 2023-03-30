@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvcFx.casual.CalculatorController">
+   <children>
+      <GridPane hgap="2.0" prefHeight="400.0" prefWidth="300.0" vgap="2.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="73.60001220703126" minHeight="10.0" prefHeight="40.800024414062506" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="95.9999755859375" minHeight="10.0" prefHeight="39.20001220703125" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="117.19998779296876" minHeight="10.0" prefHeight="68.80001220703124" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="115.19998779296873" minHeight="10.0" prefHeight="70.79997558593749" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="90.80002441406248" minHeight="10.0" prefHeight="74.80002441406248" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="First Number">
+               <GridPane.margin>
+                  <Insets left="16.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Second Number" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="16.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="firstField" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets right="16.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="secondField" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="16.0" />
+               </GridPane.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#subBtnClicked" prefHeight="50.0" prefWidth="100.0" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#plusBtnClicked" prefHeight="50.0" prefWidth="100.0" text="+" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#multiplyBtnClicked" prefHeight="50.0" prefWidth="100.0" text="*" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#divBtnClicked" prefHeight="50.0" prefWidth="100.0" text="/" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#divReBtnClicked" prefHeight="50.0" prefWidth="100.0" text="\%" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#clearBtnClicked" prefHeight="50.0" prefWidth="100.0" text="CLEAR" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+            <Label text="Result" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="16.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="resultField" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="16.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
